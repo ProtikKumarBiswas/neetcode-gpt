@@ -18,6 +18,6 @@ class Solution:
         # return round(your_answer, 4)
         s_arr = []
         for i in range(len(y_true[0])):
-            for j in range(len(y_true)):
-                s_arr.append(y_true[j][i]*math.log(y_pred[j][i]))
+            for c in range(len(y_true)):
+                s_arr.append(y_true[c][i]*math.log(y_pred[c][i]))
         return round(-sum(s_arr)/len(y_true), 4)
