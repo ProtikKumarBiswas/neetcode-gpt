@@ -31,4 +31,3 @@ class Solution:
                 gradient = self.get_derivative(Y_pred, Y, Y.shape[0], X, j)
                 weights[j] -=  self.learning_rate * gradient
         return np.round(weights, 5)
-
