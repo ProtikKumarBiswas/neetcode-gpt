@@ -48,7 +48,7 @@ class Solution:
         dW2 = np.outer(delta2.T, a1)
         db2 = delta2
 
-        delta1 = np.outer(delta2, W2) * dReLU(z1)
+        delta1 = np.outer(delta2.T, W2) * dReLU(z1)
 
         dW1 = np.outer(delta1.T, x)
         db1 = delta1
