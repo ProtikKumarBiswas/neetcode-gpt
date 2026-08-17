@@ -45,7 +45,7 @@ class Solution:
 
         delta2 = dL_dyhat * dReLU(z2)
 
-        dW2 = np.outer(delta2.T, a1)
+        dW2 = np.outer(delta2, a1)
         db2 = delta2
 
         delta1 = np.outer(delta2.T, W2) * dReLU(z1)
